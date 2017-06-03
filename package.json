@@ -1,0 +1,29 @@
+{
+  "name": "devextreme-parse-filter-for-mongodb",
+  "version": "1.0.0",
+  "description": "Parse DevExtreme dx-data-grid filter for mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb.git"
+  },
+  "keywords": [
+    "DevExtreme",
+    "dxdatagrid",
+    "filter",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "YAOHAO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb/issues"
+  },
+  "homepage": "https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
