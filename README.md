@@ -5,14 +5,14 @@ Parse DevExtreme dx-data-grid filter for mongodb
 npm install devextreme-parse-filter-for-mongodb --save
 
 ## use
+```javascript
 1. let parseFilter = require('devextreme-parse-filter-for-mongodb')
 
-2. let aggregate = parseFilter(filter) or let aggregate = parseFilter(filter, ...dateKeys)
-
-// because date is a string in filter so we need translate it into date type.
+2. let aggregate = parseFilter(filter) //or 
+   let aggregate = parseFilter(filter, ...dateKeys) // because date is a string in filter so we need translate it into date type.
 
 3. db.yourmodel.aggregate(aggregate).exec().then(models=>{...})
-
+```
 ## test
 npm test
 ### test case
@@ -34,8 +34,9 @@ demos.forEach((demo, index) => {
 ```
 
 ### test result
-Case 1:
 ```javascript
+Case 1:
+
 [
     {
         "$match": {
