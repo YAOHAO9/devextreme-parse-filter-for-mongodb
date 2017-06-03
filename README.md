@@ -13,9 +13,11 @@ npm install devextreme-parse-filter-for-mongodb --save
 
 3. db.yourmodel.aggregate(aggregate).exec().then(models=>{...})
 ```
+
 ## test
 npm test
-### test case
+
+#### test case
 ```javascript
 let parseFilter = require('./index')
 
@@ -33,10 +35,9 @@ demos.forEach((demo, index) => {
 })
 ```
 
-### test result
+#### test result
 ```javascript
 Case 1:
-
 [
     {
         "$match": {
@@ -47,8 +48,8 @@ Case 1:
         }
     }
 ]
-Case 2:
 
+Case 2:
 [
     {
         "$match": {
@@ -77,7 +78,6 @@ Case 2:
 ]
 
 Case 3:
-
 [
     {
         "$match": {
