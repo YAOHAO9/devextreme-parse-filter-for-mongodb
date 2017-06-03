@@ -8,6 +8,7 @@ npm install devextreme-parse-filter-for-mongodb --save
 1. let parseFilter = require('devextreme-parse-filter-for-mongodb')
 
 2. let aggregate = parseFilter(filter) or let aggregate = parseFilter(filter, ...dateKeys)
+
 // because date is a string in filter so we need translate it into date type.
 
 3. db.yourmodel.aggregate(aggregate).exec().then(models=>{...})
@@ -15,6 +16,7 @@ npm install devextreme-parse-filter-for-mongodb --save
 ## test
 npm test
 ### test case
+```javascript
 let parseFilter = require('./index')
 
 let demos = [
@@ -29,9 +31,11 @@ demos.forEach((demo, index) => {
     console.log("Case " + (index + 1) + ':')
     console.log(JSON.stringify(parseFilter(demo, ...datakeys), null, '    '))
 })
+```
 
 ### test result
 Case 1:
+```javascript
 [
     {
         "$match": {
@@ -42,8 +46,8 @@ Case 1:
         }
     }
 ]
-
 Case 2:
+
 [
     {
         "$match": {
@@ -72,6 +76,7 @@ Case 2:
 ]
 
 Case 3:
+
 [
     {
         "$match": {
@@ -108,3 +113,4 @@ Case 3:
         }
     }
 ]
+```
