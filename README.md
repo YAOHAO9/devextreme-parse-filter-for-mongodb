@@ -115,3 +115,6 @@ Case 3:
     }
 ]
 ```
+
+![](https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb/raw/master/alipay.jpg)  
+![](https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb/raw/master/wechat.jpg)  
