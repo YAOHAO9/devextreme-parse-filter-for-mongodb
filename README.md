@@ -115,6 +115,4 @@ Case 3:
     }
 ]
 ```
-|alipay|wechat|
-|------|------|
-|![](https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb/raw/master/alipay.jpg)|![](https://github.com/YAOHAO9/devextreme-parse-filter-for-mongodb/raw/master/wechat.jpg)| 
+## If it is helpful to you, please give me a star in github, thanks.
