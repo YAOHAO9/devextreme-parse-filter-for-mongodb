@@ -1,6 +1,6 @@
 {
   "name": "devextreme-parse-filter-for-mongodb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse DevExtreme dx-data-grid filter for mongodb",
   "main": "index.js",
   "scripts": {
