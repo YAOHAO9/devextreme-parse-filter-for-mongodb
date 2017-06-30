@@ -115,4 +115,4 @@ Case 3:
     }
 ]
 ```
-## If it is helpful to you, please give me a star ^-^, thanks.
+## If it is helpful to you, don't forget give me a star ^-^, thanks.
