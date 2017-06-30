@@ -115,4 +115,4 @@ Case 3:
     }
 ]
 ```
-## If it is helpful to you, please give me a star in github, thanks.
+## If it is helpful to you, please give me a star ^-^, thanks.
