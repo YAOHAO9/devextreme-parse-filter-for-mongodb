@@ -50,16 +50,16 @@ function getAggregatefromFilter(filter, ...datekeys) {
       if (['startswith', 'endswith', 'contains', 'notcontains'].indexOf(matchType) != -1) {
         switch (matchType) {
           case 'startswith':
-            data[key] = new RegExp('^' + value, 'i');
+            data[key] = new RegExp('^' + value.replace(/\\/g,'\\\\'), 'i');
             break;
           case 'endswith':
-            data[key] = new RegExp(value + '$', 'i');
+            data[key] = new RegExp(value.replace(/\\/g,'\\\\') + '$', 'i');
             break;
           case 'contains':
-            data[key] = new RegExp(value, 'i');
+            data[key] = new RegExp(value.replace(/\\/g,'\\\\'), 'i');
             break;
           case 'notcontains':
-            data[key] = new RegExp("^((?!" + value + ").)*$", 'i');
+            data[key] = new RegExp("^((?!" + value.replace(/\\/g,'\\\\') + ").)*$", 'i');
             break;
         }
       } else {
