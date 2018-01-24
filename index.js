@@ -50,16 +50,16 @@ function getAggregatefromFilter(filter, ...datekeys) {
       if (['startswith', 'endswith', 'contains', 'notcontains'].indexOf(matchType) != -1) {
         switch (matchType) {
           case 'startswith':
-            data[key] = new RegExp('^' + value.replace(/\\/g,'\\\\'), 'i');
+            data[key] = new RegExp('^' + value.replace(/\\/g, '\\\\'), 'i');
             break;
           case 'endswith':
-            data[key] = new RegExp(value.replace(/\\/g,'\\\\') + '$', 'i');
+            data[key] = new RegExp(value.replace(/\\/g, '\\\\') + '$', 'i');
             break;
           case 'contains':
-            data[key] = new RegExp(value.replace(/\\/g,'\\\\'), 'i');
+            data[key] = new RegExp(value.replace(/\\/g, '\\\\'), 'i');
             break;
           case 'notcontains':
-            data[key] = new RegExp("^((?!" + value.replace(/\\/g,'\\\\') + ").)*$", 'i');
+            data[key] = new RegExp("^((?!" + value.replace(/\\/g, '\\\\') + ").)*$", 'i');
             break;
         }
       } else {
@@ -141,11 +141,14 @@ function getAggregatefromFilter(filter, ...datekeys) {
       }
     }
 
-    if (getFilterDepth(filter) == 4) {
+    if (getFilterDepth(filter) >= 4) {
       if (filter.indexOf('and') > 0) {
         let aggregate = [];
         filter.forEach(ele => {
-          if (ele instanceof Array) {
+          if (getFilterDepth(ele) >= 4) {
+            let subAggregate = dealMatchByDepth(ele)
+            aggregate.push(...subAggregate)
+          } else if (ele instanceof Array) {
             let match = {};
             let data = dealMatchByDepth(ele);
             if (data instanceof Array) {
